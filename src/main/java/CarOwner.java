@@ -47,8 +47,8 @@ public class CarOwner {
     public int hashCode() {
         int result = 19;
         result = 31 * result + id;
-        result = 31 * result + name.hashCode();
-        result = 31 * result + lastName.hashCode();
+        result = 31 * result + (name == null ? 0 : name.hashCode());
+        result = 31 * result + (lastName == null ? 0 : lastName.hashCode());
         return result;
     }
 }

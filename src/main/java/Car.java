@@ -33,7 +33,7 @@ public class Car {
     public int hashCode() {
         int result = 21;
         result = 31 * result + number;
-        result = 31 * result + brand.hashCode();
+        result = 31 * result + (brand == null ? 0 : brand.hashCode());
         return result;
     }
 
